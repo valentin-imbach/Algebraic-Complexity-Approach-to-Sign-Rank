@@ -1,0 +1,217 @@
+\usepackage{fullpage}
+
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage[colorlinks=true,linkcolor=RawSienna,citecolor=ForestGreen]{hyperref}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage[normalem]{ulem}
+\usepackage{mathtools,bm}
+\usepackage[inline]{enumitem}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,hyperref,algorithm,eqparbox,array,ragged2e,stmaryrd,bbm}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{dsfont}
+\usepackage{booktabs}
+\usepackage[labelfont=bf]{caption}
+\usepackage{wrapfig}
+\usepackage{algpseudocode}
+\usepackage{tocloft}
+\usepackage[nottoc]{tocbibind} %Bibliography in ToC
+
+\let\OLDthebibliography\thebibliography %% bibliography printout settings
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\itemsep}{.4ex}
+}
+
+
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit}
+\usepackage{tikz-3dplot}
+
+%=== Theorem environments (registered with thmtools) ===
+\declaretheorem[name=Theorem]{theorem}
+\declaretheorem[name=Lemma]{lemma}
+\declaretheorem[name=Proposition]{proposition}
+\declaretheorem[name=Corollary]{corollary}
+
+\declaretheorem[name=Conjecture]{conjecture}
+\declaretheorem[name=Fact]{fact}
+\declaretheorem[name=Assumption]{assumption}
+\declaretheorem[name=Claim]{claim}
+
+\theoremstyle{definition}
+\declaretheorem[name=Definition]{definition}
+\declaretheorem[name=Problem]{question}
+\declaretheorem[name=Example]{example}
+
+\theoremstyle{remark}
+\declaretheorem[name=Remark]{remark}
+
+
+\usepackage{thm-restate}
+
+% Bold label in example environments
+\makeatletter
+\def\th@example{%
+  \thm@notefont{}% same as heading font
+  \normalfont % body font
+}
+\def\th@definition{%
+  \thm@notefont{}% same as heading font
+  \normalfont % body font
+}
+\makeatother
+
+
+% =============================================
+
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\crk}{\overline{rk}}
+\DeclareMathOperator{\sk}{sk}
+\DeclareMathOperator{\csk}{\overline{sk}}
+\DeclareMathOperator{\mar}{mar}
+\DeclareMathOperator{\Rcc}{R}
+\DeclareMathOperator{\Ucc}{U}
+\DeclareMathOperator{\Dcc}{D}
+\DeclareMathOperator{\Ccc}{C}
+\DeclareMathOperator{\dist}{dist}
+
+
+
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\supp}{supp}
+
+\renewcommand{\P}{\operatorname{P}}
+
+
+\DeclareMathOperator{\EQ}{\textsc{Eq}}
+\DeclareMathOperator{\HD}{\textsc{HD}}
+\let\SS\undefined
+\DeclareMathOperator{\SS}{\textsc{SS}}
+
+\DeclareMathOperator{\xor}{\textsc{Xor}}
+\DeclareMathOperator{\Rank}{\textsc{Rank}}
+\DeclareMathOperator{\HW}{\textsc{HW}}
+\DeclareMathOperator{\Parity}{\textsc{Parity}}
+\DeclareMathOperator{\PRank}{\textsc{PRank}}
+
+\DeclareMathOperator{\SK}{\textsc{SK}}
+
+\newtheorem{step}{Step}
+
+
+\crefname{example}{Example}{Examples}
+
+
+\newcommand{\rankOne}{\Rank_{\leq 1}}
+
+\title{\vspace{-3cm}Rank-One\vspace{-1cm}}
+
+% \setlength{\parindent}{0pt}
+
+\newcommand{\valentin}[1]{{\color{red}\textbf{VI:} #1 }}
+\newcommand{\mika}[1]{{\color{Cerulean}\textbf{Mika:} #1 }}
+\newcommand{\kaave}[1]{{\color{blue}\textbf{Kaave:} #1 }}
+\newcommand{\anastasia}[1]{{\color{DarkOrchid}\textbf{Anastasia:} #1 }}
+
+\usepackage[most]{tcolorbox}
+\newtcbox{\dominobox}{
+  on line,
+  boxrule=0.5pt,
+  arc=3pt,
+  left=3pt,right=3pt,top=0pt,bottom=0pt,
+  boxsep=0pt
+}
+
+\newcommand{\domino}[2]{%
+  \,\dominobox{$\begin{matrix} #1 \\ #2 \end{matrix}$}\,%
+}
+
+%STANDARD COMMANDS
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\One}{\mathds{1}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%RENEWED COMMANDS
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\setminus}{\backslash}
+\renewcommand{\Re}{{\rm Re}}
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\subset}{\subseteq}
+\renewcommand{\supset}{\supseteq}
+
+\usetikzlibrary{
+    babel,
+    arrows,
+	calc,
+	patterns,
+	intersections,
+    backgrounds,
+    trees,
+    mindmap,
+    fadings,
+	decorations.pathreplacing,
+	decorations.pathmorphing,
+	decorations.text,
+	decorations.markings,
+    scopes,
+	shapes,
+	positioning,
+    arrows.meta,
+    math,
+    shapes.geometric,
+    calligraphy
+}
+
+
+% COLOURED BOXES
+
+
+%\definecolor{resultcolor}{HTML}{FFE1D9}
+\definecolor{resultcolor}{HTML}{EED7FC}
+\definecolor{definitioncolor}{HTML}{FCDFBE}
+%\definecolor{definitioncolor}{HTML}{EFF9BD}
+%\definecolor{definitioncolor}{HTML}{FFE4B8}
+\definecolor{questioncolor}{HTML}{DDE8EB}
+
+\newenvironment{boxtheorem}{\begin{theorem}}{\end{theorem}}
+\tcolorboxenvironment{boxtheorem}{colback=resultcolor, colframe=white, colbacktitle=resultcolor, coltitle=resultcolor}
+
+\newenvironment{boxlemma}{\begin{lemma}}{\end{lemma}}
+\tcolorboxenvironment{boxlemma}{colback=resultcolor, colframe=white, colbacktitle=resultcolor, coltitle=resultcolor}
+
+\newenvironment{boxproposition}{\begin{proposition}}{\end{proposition}}
+\tcolorboxenvironment{boxproposition}{colback=resultcolor, colframe=white, colbacktitle=resultcolor, coltitle=resultcolor}
+
+\newenvironment{boxcorollary}{\begin{corollary}}{\end{corollary}}
+\tcolorboxenvironment{boxcorollary}{colback=resultcolor, colframe=white, colbacktitle=resultcolor, coltitle=resultcolor}
+
+\newenvironment{boxdefinition}{\begin{definition}}{\end{definition}}
+\tcolorboxenvironment{boxdefinition}{colback=definitioncolor, colframe=white, colbacktitle=definitioncolor, coltitle=definitioncolor}
+
+\newenvironment{boxquestion}{\begin{question}}{\end{question}}
+\tcolorboxenvironment{boxquestion}{colback=questioncolor, colframe=white,
+    colbacktitle=questioncolor, coltitle=questioncolor}
+
+
+ 

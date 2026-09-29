@@ -1,0 +1,34 @@
+
+\begin{tikzpicture}[scale=1.1]
+\tikzset{inner sep=0,outer sep=0.5}
+
+% Set bounding box
+%\node (a) at (-7.1,0) {\mbox{}};
+%\node (b) at (7.1,0) {\mbox{}};
+
+\tikzstyle{a}=[inner sep=4pt,fill=blue!20,rounded corners=3pt]
+\tikzstyle{b}=[a, fill=red!20]
+
+\begin{scope}[yscale=1]
+\normalsize
+\node[a] (rk0) at (-1,1) {$\rk_0$};
+\node[a] (crk0) at (-2,2) {$\crk_0$};
+\node[a] (rkpm) at (-3,3) {$\rk_\pm$};
+\node[b] (sk0) at (-2,0) {$\sk_0$};
+\node[b] (csk0) at (-3,1) {$\csk_0$};
+\node[b] (skpm) at (-4,2) {$\sk_\pm$};
+\end{scope}
+
+
+\path[-{Stealth[length=6pt]},line width=0.7pt,gray]
+(rk0) edge (crk0)
+(crk0) edge (rkpm)
+(sk0) edge (rk0)
+(sk0) edge (csk0)
+(csk0) edge (skpm)
+(csk0) edge (crk0)
+(skpm) edge (rkpm);
+
+
+
+\end{tikzpicture}

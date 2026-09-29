@@ -1,0 +1,110 @@
+\begin{tikzpicture}[scale = 0.5]
+		
+	\fill[blue!20] (0,10) rectangle (4,9);
+        \node at (2, 9.5) {$a$};
+        
+        \fill[red!20] (0, 9) rectangle (4,8);
+        \node at (2, 8.5) {$b$};
+    
+        \fill[blue!20] (0,6) rectangle (4,3);
+        \node at (2, 5.5) {$a$};
+        \node at (2, 4.5) {$a$};
+        \node at (2, 3.5) {$a$};
+        
+        \fill[green!20] (0,3) rectangle (4,0);
+        \node at (2, 2.5) {$d$};
+        \node at (2, 1.5) {$d$};
+        \node at (2, 0.5) {$d$};
+
+        \draw [decorate, decoration={brace, amplitude=5pt, raise=1mm}] (0,0.1) -- (0,2.9) node[midway, xshift=-5mm]{$t$};
+        \draw [decorate, decoration={brace, amplitude=5pt, raise=1mm}] (0,3.1) -- (0,5.9) node[midway, xshift=-5mm]{$t$};
+
+        \draw[thick] (0,0) rectangle (4,12);
+        \node at (2, 13) {$\phi(x)$};
+
+        \node[gray] at (2, 11) {$x_{1,\dots, j-1}$};
+        \node[gray] at (2, 7) {$x_{j+2,\dots, n}$};
+        
+
+        \tikzset{shift={(7, 0)}}
+
+        \fill[blue!20] (0,10) rectangle (4,9);
+        \node at (2, 9.5) {$a$};
+        \fill[green!20] (0, 9) rectangle (4,8);
+        \node at (2, 8.5) {$d$};
+        \fill[blue!20] (0,8) rectangle (4,7);
+        \node at (2, 7.5) {$a$};
+        \fill[green!20] (0, 7) rectangle (4,6);
+        \node at (2, 6.5) {$d$};
+        \fill[blue!20] (0,6) rectangle (4,5);
+        \node at (2, 5.5) {$a$};
+        \fill[red!20] (0, 5) rectangle (4,4);
+        \node at (2, 4.5) {$b$};
+        \fill[blue!20] (0,4) rectangle (4,3);
+        \node at (2, 3.5) {$a$};
+        \fill[green!20] (0, 3) rectangle (4,2);
+        \node at (2, 2.5) {$d$};
+
+        \draw [decorate, decoration={brace, amplitude=5pt, raise=1mm}] (0,4.1) -- (0,9.9) node[midway, xshift=-6mm]{$2u$};
+	
+	\draw[thick] (0,0) rectangle (4,12);
+        \node at (2, 13) {$x(u)$};
+
+        \node[gray] at (2, 11) {$x_{1,\dots, j-1}$};
+        \node[gray] at (2, 1) {$x_{j+2,\dots, n}$};
+
+
+        \tikzset{shift={(9, 0)}}
+
+        \fill[blue!20] (0,10) rectangle (4,9);
+        \node at (2, 9.5) {$a$};
+        \fill[green!20] (0, 9) rectangle (4,8);
+        \node at (2, 8.5) {$d$};
+        \fill[orange!20] (0,8) rectangle (4,7);
+        \node at (2, 7.5) {$c$};
+        \fill[green!20] (0, 7) rectangle (4,6);
+        \node at (2, 6.5) {$d$};
+        \fill[blue!20] (0,6) rectangle (4,5);
+        \node at (2, 5.5) {$a$};
+        \fill[green!20] (0, 5) rectangle (4,4);
+        \node at (2, 4.5) {$d$};
+        \fill[blue!20] (0,4) rectangle (4,3);
+        \node at (2, 3.5) {$a$};
+        \fill[green!20] (0, 3) rectangle (4,2);
+        \node at (2, 2.5) {$d$};
+
+        \draw [decorate, decoration={brace, amplitude=5pt, raise=1mm}] (4,9.9) -- (4,6.1) node[midway, xshift=6mm]{$2v$};
+
+        \draw[thick] (0,0) rectangle (4,12);
+        \node at (2, 13) {$y(v)$};
+
+        \node[gray] at (2, 11) {$y_{1,\dots, j-1}$};
+        \node[gray] at (2, 1) {$y_{j+2,\dots, n}$};
+        
+
+        \tikzset{shift={(7, 0)}}
+
+        \fill[orange!20] (0,10) rectangle (4,9);
+        \node at (2, 9.5) {$c$};
+        \fill[green!20] (0, 9) rectangle (4,8);
+        \node at (2, 8.5) {$d$};
+        
+        \fill[blue!20] (0,6) rectangle (4,3);
+        \node at (2, 5.5) {$a$};
+        \node at (2, 4.5) {$a$};
+        \node at (2, 3.5) {$a$};
+        \fill[green!20] (0,3) rectangle (4,0);
+        \node at (2, 2.5) {$d$};
+        \node at (2, 1.5) {$d$};
+        \node at (2, 0.5) {$d$};
+
+        \draw [decorate, decoration={brace, amplitude=5pt, raise=1mm}] (4,2.9) -- (4,0.1) node[midway, xshift=5mm]{$t$};
+        \draw [decorate, decoration={brace, amplitude=5pt, raise=1mm}] (4,5.9) -- (4,3.1) node[midway, xshift=5mm]{$t$};
+	
+	\draw[thick] (0,0) rectangle (4,12);
+        \node at (2, 13) {$\phi(y)$};
+
+        \node[gray] at (2, 11) {$y_{1,\dots, j-1}$};
+        \node[gray] at (2, 7) {$y_{j+2,\dots, n}$};
+	
+\end{tikzpicture}

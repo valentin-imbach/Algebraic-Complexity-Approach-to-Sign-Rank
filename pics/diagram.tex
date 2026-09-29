@@ -1,0 +1,44 @@
+
+\begin{tikzpicture}[scale=1.5]
+\tikzset{inner sep=0,outer sep=0.5}
+
+% Set bounding box
+%\node (a) at (-7.1,0) {\mbox{}};
+%\node (b) at (7.1,0) {\mbox{}};
+
+\tikzstyle{a}=[inner sep=4pt,fill=blue!20,rounded corners=3pt]
+\tikzstyle{b}=[a, fill=red!20]
+
+\begin{scope}[yscale=1]
+\large
+\node[a, fill = green!20] (D) at (0,0) {$\ \Dcc\ $};
+\node[a] (rk0) at (-1,1) {$\rk_0$};
+\node[a] (rkpm) at (-2,2) {$\rk_\pm$};
+\node[a, fill = green!20] (R) at (1,1) {$\ \Rcc\ $};
+\node[b] (sk0) at (-2,0) {$\sk_0$};
+\node[b] (skpm) at (-3,1) {$\sk_\pm$};
+\end{scope}
+
+
+\path[-{Stealth[length=6pt]},line width=0.7pt,gray]
+(D) edge (R)
+(D) edge (rk0)
+(rk0) edge (rkpm)
+(sk0) edge (rk0)
+(sk0) edge (skpm)
+(skpm) edge (rkpm);
+
+
+% \small
+% \hypersetup{hidelinks}
+% \tikzset{new/.style={-{Stealth[length=6pt]},dashed,line width=1pt,YellowOrange}}
+% \draw[new,bend right=7]
+% (Res) edge
+% node[midway,below,inner sep=4pt,sloped] {\cref{thm:res-sa}}
+% (uSA);
+% \draw[new,bend right=20]
+% (RevRes) edge
+% node[pos=0.17,below,sloped,inner sep=3pt] {\cref{thm:revres-ns}}
+% (FNS);
+
+\end{tikzpicture}
